@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.main-header {
+    background-color: #0aa9f9;
+    padding: 30px 20px;
+}
+
+.main-navigation {
+    float: right;
+}
+
+.main-navigation a {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 0 7px;
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: .4s all ease-out;
+}
+
+.main-navigation .selected {
+    background-color: #2ab9fd;
+    border-radius: 3px;
+}
+
+.main-navigation a:first-child { /* nth-of-type(2) the second element */
+    margin-left:0;
+}
+
+.main-navigation a:last-child {
+    margin-right:0;
+}
+
+.main-navigation a:hover {
+    background-color: #2ab9fd;
+}
+
+.hamburger-btn {
+    display: none;
+    width:30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.hamburger-expanded {
+    display: block;
+}
+
+.hamburger-btn div{
+    height: 3px;
+    background-color: #000;
+    margin: 7px 0;
+}
+
+.hamburger-panel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #0f3162;
+    text-align: center;
+    z-index: 10;
+    transition: .3 ease-in-out;
+}
+
+.hamburger-close-btn {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+.logo {
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.jumbo {
+    position: relative;
+    min-height: 432px;
+    max-height: 432px;
+    padding-top: 100px;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box; /*compensation for padding-top*/
+}
+
+.jumbo .main-title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #0aa9f9;
+    text-shadow: -1px 1px #000;
+}
+
+.jumbo .sub-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 100;
+    text-shadow: -1px 1px #000;
+}
+
+.jumbo .btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    text-decoration: none;
+    transition: .4s all ease-in-out;
+}
+
+.jumbo .btn.primary {
+    color: #fff;
+    background-color: #0aa9f9;
+}
+
+
+.jumbo .btn.secondary {
+    color: #0aa9f9;
+    background-color: #fff;
+}
+
+.jumbo .btn:hover {
+    color: #fff;
+    background-color: #2ab9fd;
+}
+
+.arrow-holder {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.arrow.left {
+    margin-left: 20px;
+    float: left;
+}
+
+.arrow.right {
+    margin-right: 20px;
+    float: right;
+}
+
+/* Features Section*/
+
+.features {
+    padding-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.features {
+    margin-bottom: 100px;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+
+.section-title h3 {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.feature-item {
+    display: inline-block;
+    width: 24.3%;
+}
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #0aa9f9;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-image: url(../img/icon.svg);
+    background-size: 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.feature-sub-title {
+    font-size: 14px;
+}
+
+/* Product Section */
+
+.products .section-title {
+    text-align: center;
+}
+
+.products-holder {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.product-item {
+    max-width: 200px;
+    background-color: #0aa9f940;
+    padding: 20px;
+    
+}
+
+.img-holder, .img-holder img {
+    max-width: 200px;
+}
+
+/* Footer styles here */
+
+.website-footer {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #0aa9f9;
+    color: #fff;
+}
+
+.website-footer nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.website-footer nav a:hover {
+    color: #020072;
+}
+
+.website-footer-col {
+    margin-bottom: 20px;
+}
+
+.website-footer-row {
+    margin-bottom: 30px;
+}
+
+.website-footer-row:last-child {
+    text-align: center;
+    margin-bottom: 0;
+}
+/* MOBILE-FIRST */
+@media only screen and (min-width: 420px) {
+    .website-footer-col {
+        display: inline-block;
+        margin-right: 80px;
+    }
+
+    .products-holder {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .website-footer-col {
+        max-width: 160px;
+    }
+
+    .products-holder {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .website-footer-col {
+        max-width: 300px;
+    }
+}
+
+@media only screen and  (max-width: 400px) {
+    .main-navigation {
+       display: none;
+    }
+    
+    .main-navigation.mobile-active {
+        display: block;
+    }
+
+    .main-navigation.mobile-active a {
+        display: block;
+    }
+
+    .feature-item {
+        display: block;
+        width: 90vw;
+        margin: 0 auto 40px auto;
+    }
+
+    .arrow-holder {
+        top: initial;
+        transform: none;
+        bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+    .main-navigation {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .jumbo .main-title {
+        color: #ffa500;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hamburger-btn {
+        display: inline-block;
+    }
+}
