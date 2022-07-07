@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fitness Software</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav__container">
+            <div class="logo"><a href="index.html"><img src="images/pngwing.com.png" alt="fitness-logo"
+                        class="fitness-logo" /></a></div>
+            <nav class="nav-holder">
+                <div><a href="Admin/admin-login.html" class="nav-item">Admin Panel</a></div>
+                <div class="dropdown__menu">
+                    <a href="#" class="nav-item resources">Resources</a><i class="fa fa-sort-down"></i>
+                    <div class="dropdown-menu__content">
+                        <a href="calculator.html"><i class="fa fa-question-circle"> </i>Calorie Calculator</a>
+                        <a href="achievements-reviews.html"><i class="fa fa-pencil"></i> Achievements & Top Reviews</a>
+                        <a href="faq-accordion.html"><i class="fa fa-search-plus"></i> FAQs</a>
+                        <a href="trainer-slider.html"><i class="fa fa-file"></i> How to become an online personal
+                            trainer</a>
+                    </div>
+                </div>
+                <div class="nav-child__space"><a href="#footer" class="nav-item">Contact Us</a></div>
+                <div class="nav-child__space"><a href="#trustSection" class="nav-item">About Us</a></div>
+            </nav>
+
+            <nav id="navMobile" class="mobile-navigation" data-visible="false">
+                <a href="Admin/admin-login.html" class="nav-mobile-item">Admin Panel</a>
+                <a href="calculator.html" class="nav-mobile-item">Calorie Calculator</a>
+                <a href="achievements-reviews.html" class="nav-mobile-item">Achievements & Top Reviews</a>
+                <a href="faq-accordion.html" class="nav-mobile-item">FAQs</a>
+                <a href="trainer-slider.html" class="nav-mobile-item">Personal Trainer Guide</a>
+                <a href="#footer" class="nav-mobile-item">Contact Us</a>
+                <a href="#trustSection" class="nav-mobile-item">About Us</a>
+            </nav>
+        </div>
+        <div class="signin-btn">
+            <a href="login.html"><button class="signin-clients__btn">Sign in</button></a>
+            <button class="signup-clients__btn" style="display: none;">Sign Up</button>
+        </div>
+        <div class="hamburger-btn" cross-visible="false">
+            <div class="hamburger-up">
+                <div class="exit-nav__line"></div>
+            </div>
+            <div class="hamburger-mid"></div>
+            <div class="hamburger-down"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="jumbotron">
+            <div class="jumbotron-content">
+                <h1 class="jumbo__main-heading">The #1 web-based software for personal trainers, coaches, and gyms.</h1>
+                <p class="trainer-question">You are a trainer?</p>
+                <a class="jumbotron-trainers" href="Trainers/trainers-login.html"><button
+                        class="signin-trainers__btn">Sign in</button></a>
+                <p class="subheader-jumbo">Join a growing, global community of personal trainers and gyms that use our
+                    fitness software to grow their fitness
+                    business every single day.
+                </p>
+                <div class="wrapper">
+                    <form class="subscribe-content" method="post">
+                        <input id="email" class="input-field" type="email" name="email" placeholder="Email...">
+                        <button class="subscription-btn" type="submit"
+                            onclick="AddSubscribersToDb(event)">Subscribe</button>
+                    </form>
+                </div>
+                <div class="jumbo-screenshot-wrapper">
+                    <div class="jumbo-screenshot">
+                        <div class="jumbo-screenshot__header">
+                            <p class="jumbo-screenshot__trainer-name">Viktor Tsekov</p>
+                            <div class="jumbo-screenshot__images-holder">
+                                <i class="fa fa-bell"></i>
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                        </div>
+                        <div class="jumbo-screenshot_main">
+                            <div class="jumbo-screenshot_main__btns">
+                                <span class="add-client__btn"><i class="fa fa-plus"></i> Add Client</span>
+                                <span class="group-chat__btn"><i class="fa fa-location-arrow"></i> Group Chat</span>
+                                <span class="all-clients__btn"><i class="fa fa-user"></i> All Clients</span>
+                                <!-- <span class="quick-links__btn"><i class="fa fa-caret-down"></i> Quick Links</span> -->
+                            </div>
+                            <div class="jumbo-screenshot_main__searchbar">
+                                <i class="fa fa-search"></i>
+                                <input class="search-clients" type="text" placeholder="Search Clients...">
+                            </div>
+                            <div class="jumbo-screenshot_main__accounts">
+                                <div class="jumbo-accounts jumbo-acc__first-line">
+                                    <div class="jumbo-acc">
+                                        <img src="images/jumbo-img.PNG" width="55px" height="55px"
+                                            style="border-radius: 50%;" />
+                                        <div class="jumbo-acc__info">
+                                            <h3 class="jumbo-acc-name">Peter Johnson</h3>
+                                            <div class="jumbo__metrics-exercies"><span>Metrics</span><span> |
+                                                </span><span>Exercises</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jumbo-acc-progressbars">
+                                        <div class="workouts-container">
+                                            <p class="workouts-title">Workouts</p>
+                                            <div class="workouts-progressbar">
+                                                <div class="green-part__workoutsbar peter-johnson"></div>
+                                                <div class="red-part__workoutsbar peter-johnson"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tasks-container">
+                                            <p class="tasks-title">Tasks</p>
+                                            <div class="tasks-progressbar">
+                                                <div class="green-part__tasksbar peter-johnson"></div>
+                                                <div class="red-part__tasksbar peter-johnson"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nutrition-container">
+                                            <p class="nutrition-title">Nutrition</p>
+                                            <div class="nutrition-progressbar">
+                                                <div class="green-part__nutrition peter-johnson"></div>
+                                                <div class="red-part__nutrition peter-johnson"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="jumbo-accounts jumbo-acc__second-line">
+                                    <div class="jumbo-acc">
+                                        <img src="images/jumbo-img2.PNG" width="55px" height="55px"
+                                            style="border-radius: 50%;" />
+                                        <div class="jumbo-acc__info">
+                                            <h3 class="jumbo-acc-name">Denis Botev</h3>
+                                            <div class="jumbo__metrics-exercies"><span>Metrics</span><span> |
+                                                </span><span>Exercises</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jumbo-acc-progressbars">
+                                        <div class="workouts-container">
+                                            <p class="workouts-title">Workouts</p>
+                                            <div class="workouts-progressbar">
+                                                <div class="green-part__workoutsbar denis-botev"></div>
+                                                <div class="red-part__workoutsbar denis-botev"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tasks-container">
+                                            <p class="tasks-title">Tasks</p>
+                                            <div class="tasks-progressbar">
+                                                <div class="green-part__tasksbar denis-botev"></div>
+                                                <div class="red-part__tasksbar denis-botev"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nutrition-container">
+                                            <p class="nutrition-title">Nutrition</p>
+                                            <div class="nutrition-progressbar">
+                                                <div class="green-part__nutrition denis-botev"></div>
+                                                <div class="red-part__nutrition denis-botev"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="jumbo-accounts jumbo-acc__third-line">
+                                    <div class="jumbo-acc">
+                                        <img src="images/jumbo-img3.PNG" width="55px" height="55px"
+                                            style="border-radius: 50%;" />
+                                        <div class="jumbo-acc__info">
+                                            <h3 class="jumbo-acc-name">Bultras Plovdiv</h3>
+                                            <div class="jumbo__metrics-exercies"><span>Metrics</span><span> |
+                                                </span><span>Exercises</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jumbo-acc-progressbars">
+                                        <div class="workouts-container">
+                                            <p class="workouts-title">Workouts</p>
+                                            <div class="workouts-progressbar">
+                                                <div class="green-part__workoutsbar bultras-plovdiv"></div>
+                                                <div class="red-part__workoutsbar bultras-plovdiv"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tasks-container">
+                                            <p class="tasks-title">Tasks</p>
+                                            <div class="tasks-progressbar">
+                                                <div class="green-part__tasksbar bultras-plovdiv"></div>
+                                                <div class="red-part__tasksbar bultras-plovdiv"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nutrition-container">
+                                            <p class="nutrition-title">Nutrition</p>
+                                            <div class="nutrition-progressbar">
+                                                <div class="green-part__nutrition bultras-plovdiv"></div>
+                                                <div class="red-part__nutrition bultras-plovdiv"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="jumbo-accounts jumbo-acc__fourth-line">
+                                    <div class="jumbo-acc">
+                                        <img src="images/jumbo-img4.PNG" width="55px" height="55px"
+                                            style="border-radius: 50%;" />
+                                        <div class="jumbo-acc__info">
+                                            <h3 class="jumbo-acc-name">Ideal Petroff</h3>
+                                            <div class="jumbo__metrics-exercies"><span>Metrics</span><span> |
+                                                </span><span>Exercises</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jumbo-acc-progressbars">
+                                        <div class="workouts-container">
+                                            <p class="workouts-title">Workouts</p>
+                                            <div class="workouts-progressbar">
+                                                <div class="green-part__workoutsbar ideal-petroff"></div>
+                                                <div class="red-part__workoutsbar ideal-petroff"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tasks-container">
+                                            <p class="tasks-title">Tasks</p>
+                                            <div class="tasks-progressbar">
+                                                <div class="green-part__tasksbar ideal-petroff"></div>
+                                                <div class="red-part__tasksbar ideal-petroff"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nutrition-container">
+                                            <p class="nutrition-title">Nutrition</p>
+                                            <div class="nutrition-progressbar">
+                                                <div class="green-part__nutrition ideal-petroff"></div>
+                                                <div class="red-part__nutrition ideal-petroff"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="jumbo-accounts jumbo-acc__fifth-line">
+                                    <div class="jumbo-acc">
+                                        <img src="images/jumbo-img5.PNG" width="55px" height="55px"
+                                            style="border-radius: 50%;" />
+                                        <div class="jumbo-acc__info">
+                                            <h3 class="jumbo-acc-name">Petar Peshov</h3>
+                                            <div class="jumbo__metrics-exercies"><span>Metrics</span><span> |
+                                                </span><span>Exercises</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jumbo-acc-progressbars">
+                                        <div class="workouts-container">
+                                            <p class="workouts-title">Workouts</p>
+                                            <div class="workouts-progressbar">
+                                                <div class="green-part__workoutsbar petar-peshov"></div>
+                                                <div class="red-part__workoutsbar petar-peshov"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tasks-container">
+                                            <p class="tasks-title">Tasks</p>
+                                            <div class="tasks-progressbar">
+                                                <div class="green-part__tasksbar petar-peshov"></div>
+                                                <div class="red-part__tasksbar petar-peshov"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="nutrition-container">
+                                            <p class="nutrition-title">Nutrition</p>
+                                            <div class="nutrition-progressbar">
+                                                <div class="green-part__nutrition petar-peshov"></div>
+                                                <div class="red-part__nutrition petar-peshov"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trustSection" class="trust-section">
+            <div class="trust-section_content">
+                <div class="trust-section-upper_part">
+                    <h1>Truly, a global
+                        community.
+                    </h1>
+                    <div class="trust-section_upper">
+                        <p>Our system is a fully integrated app for personal trainers and gyms. We bring together all
+                            the
+                            tools
+                            needed for fitness, health, and wellness professionals to run their businesses. Whether it’s
+                            through our suite of tools and features or the content that we provide, we truly care about
+                            being there for the community.</p>
+                        <p>
+                            This mentality reflects itself in our users. Whether it’s studio gyms, in-personal or online
+                            personal trainers, our system is powering fitness businesses worldwide.
+                        </p>
+                    </div>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badges__line-one">
+                        <div class="badge one">
+                            <p>Fitness</p>
+                            <p>2M+</p>
+                            <p>Workouts and fitness plans completed.</p>
+                        </div>
+
+                        <div class="badge two">
+                            <p>Trusted</p>
+                            <p>20K+</p>
+                            <p>Fitness and nutrition professionals.</p>
+                        </div>
+
+                        <div class="badge three">
+                            <p>Tracking</p>
+                            <p>1M+</p>
+                            <p>Metrics created and tracked.</p>
+                        </div>
+
+                        <div class="badge four">
+                            <p>Global</p>
+                            <p>100 Countries+</p>
+                            <p>We are available across the world and still growing.</p>
+                        </div>
+                    </div>
+                    <div class="trust-badges__line-two">
+                        <div class="badge five">
+                            <p>Lifestyle</p>
+                            <p>1M+</p>
+                            <p>Meals and tasks assigned.</p>
+                        </div>
+
+                        <div class="badge six">
+                            <p>Results</p>
+                            <p>100K+</p>
+                            <p>Clients have hit their goals.</p>
+                        </div>
+
+                        <div class="badge seven">
+                            <p>Accessible</p>
+                            <p>1 Language</p>
+                            <p>Our fitness app is available only in English, but expect more languages soon.</p>
+                        </div>
+
+                        <div class="badge eight">
+                            <p>Reliability</p>
+                            <p>100% Insurance</p>
+                            <p>FSoftware is the most reliable and useful system you will ever try.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section__triangle-background">
+            <div class="trangles-background__content">
+                <div class="triangles">
+                    <img src="Gradient-picker/Triangle.png" />
+                </div>
+                <div class="background-with-content">
+                    <div class="background-with-content__upper">
+                        <div class="left-part">
+                            <p>Streamline workout building</p>
+                            <h1>Putting the personal in personal fitness programs.
+                            </h1>
+                            <p>Easily build fitness programs, assign them to one or many clients, track client progress,
+                                and
+                                more. Data-based personal training is easier then ever.
+                            </p>
+                            <button class="start-building__btn">Start Building</button>
+                        </div>
+                        <div class="right-part">
+                            <img src="images/oie_transparent.png" alt="phone-img" />
+                        </div>
+                    </div>
+
+                    <div class="background-with-content__bottom">
+                        <div class="time-saving">
+                            <i class="fa fa-clock-o"></i>
+                            <h3 class="background-with-content__text">Real time savers.</h3>
+                            <p class="background-with-content__text">Save time with robust workout building capabilities
+                                that allow you to <span class="background-with-content__text">save workout
+                                    templates, create recurring workout schedules, copy and paste workouts</span>, and
+                                more</p>
+                        </div>
+
+                        <div class="have-confidence">
+                            <i class="fa fa-shield" aria-hidden="true"></i>
+                            <h3 class="background-with-content__text">Have confidence.</h3>
+                            <p class="background-with-content__text">From <span
+                                    class="background-with-content__text">demo videos</span> for exercises to <span
+                                    class="background-with-content__text">instructions</span> that you can
+                                note on workouts to <span class="background-with-content__text">push
+                                    notifications</span> for messaging, remote training has
+                                never felt so close.</p>
+                        </div>
+
+                        <div class="customizable">
+                            <i class="fa fa-home"></i>
+                            <h3 class="background-with-content__text">Customizable.</h3>
+                            <p class="background-with-content__text">Every account comes with a default <span
+                                    class="background-with-content__text">exercise list</span> and demo videos, made by
+                                professionals.
+                                Use what we provide or replace it with your own.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangles">
+                    <img src="Gradient-picker/Training (1).png" />
+                </div>
+                <div class="automation-holder">
+                    <div class="automation-holder__upper">
+                        <div class="automation-holder__left-part">
+                            <img src="images/workout.jpg" alt="workout-img" />
+                        </div>
+                        <div class="automation-holder__right-part">
+                            <p class="background-with-content__text">Automation</p>
+                            <h1 class="background-with-content__text">Less work.</h1>
+                            <h1 class="background-with-content__text">More free time.</h1>
+                            <h1 class="background-with-content__text">More growth.</h1>
+                            <p class="background-with-content__text">Technology that helps you focus more on your
+                                clients and running your business and less on
+                                admin work.
+                            </p>
+                            <button class="start-automating__btn">Start Automating</button>
+                        </div>
+                    </div>
+
+                    <div class="automation-holder__bottom">
+                        <div class="time-saving">
+                            <i class="fa fa-bar-chart"></i>
+                            <h3 class="background-with-content__text">Automated results tracking.</h3>
+                            <p class="background-with-content__text">Assign workouts and fitness programs and let our system
+                                do the rest. Clients can enter workout results on the fly that automatically get tallied
+                                into <span class="background-with-content__text">graphs and charts</span>.
+                            </p>
+                        </div>
+
+                        <div class="have-confidence">
+                            <i class="fa fa-user-plus user"></i>
+                            <h3 class="background-with-content__text">Automate client profile creation.</h3>
+                            <p class="background-with-content__text">When a non-client makes a purchase on your
+                                personalized trainer page, our system <span
+                                    class="background-with-content__text">automatically creates an account and client
+                                    profile</span> for them.</p>
+                        </div>
+
+                        <div class="customizable">
+                            <i class="fa fa-tasks"></i>
+                            <h3 class="background-with-content__text">Multi-day programs.</h3>
+                            <p class="background-with-content__text">Create workouts, tasks, and nutrition plans and
+                                attach them to programs to <span class="background-with-content__text">streamline
+                                    delivery of your services</span>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="triangles">
+                    <img src="Gradient-picker/Training (3).png" />
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="why-us__container">
+                <h3>Why Us?</h3>
+                <h1>Urgency, quality, and community are at our core.</h1>
+                <div class="why-us__reasons">
+                    <div class="why-us__lines">
+                        <div class="why-us__icon-title">
+                            <i class="fa fa-bolt"></i>
+                            <span>We're fast.</span>
+                        </div>
+                        <p>We are the fastest improving app for personal trainers on the market. We are constantly
+                            releasing
+                            new
+                            features and improving existing ones.</p>
+                    </div>
+
+                    <div class="why-us__lines">
+                        <div class="why-us__icon-title">
+                            <i class="fa fa-users"></i>
+                            <span>We're community led.</span>
+                        </div>
+                        <p>From support to the relationships we've developed already with our users, we pride ourselves
+                            in
+                            being able to listen to what really matters within the fitness, health, and wellness
+                            community.
+                        </p>
+                    </div>
+
+                    <div class="why-us__lines last-line">
+                        <div class="why-us__icon-title">
+                            <i class="fa fa-heart"></i>
+                            <span>We strive to empower.</span>
+                        </div>
+                        <p>Fitness, health, and wellness professionals are all a part of a community of people that work
+                            everyday to better the health of the public. Our goal is to provide the tools necessary to
+                            allow
+                            you to focus more on changing lives and less on managing administrative work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment-group-chats">
+            <div class="triangles">
+                <img src="Gradient-picker/Training (4).png" />
+            </div>
+
+            <div class="payment-content">
+                <div class="payment-content__upper">
+                    <div class="left-part payment">
+                        <p>Create new revenue streams</p>
+                        <h1>Streamline payments and purchasing.</h1>
+                        <p>Say goodbye to old, disjointed forms of getting paid and say hello to a newer, simpler way
+                            where you decide how you get paid.
+                        </p>
+                        <button class="start-creating__btn">Start Creating</button>
+                    </div>
+                    <div class="right-part">
+                        <img src="images/oie_transparent.png" alt="phone-img" />
+                    </div>
+                </div>
+
+                <div class="payment-content__bottom">
+                    <div class="time-saving build-packages">
+                        <i class="fa fa-industry"></i>
+                        <h3 class="background-with-content__text">Build packages.</h3>
+                        <p class="background-with-content__text">You decide how you sell your services. <span
+                                class="background-with-content__text green-text">Packages </span>let you bundle your
+                            services for
+                            one-time, simple client payments.</p>
+                    </div>
+
+                    <div class="have-confidence automatic-subscriptions">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                        <h3 class="background-with-content__text">Automatic subscriptions.</h3>
+                        <p class="background-with-content__text">Have clients that make purchases regularly? <span
+                                class="background-with-content__text green-text">Build subscriptions </span> to simplify
+                            and
+                            automate their payments. Set up billing cycles and add an extra level of security and
+                            predictability to your income.</p>
+                    </div>
+
+                    <div class="customizable session-rate">
+                        <i class="fa fa-gbp"></i>
+                        <h3 class="background-with-content__text">Set your session rate.</h3>
+                        <p class="background-with-content__text">Set your <span
+                                class="background-with-content__text green-text">session rate</span> so clients can
+                            purchase one or
+                            many sessions in just a couple taps.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="triangles">
+                <img src="Gradient-picker/grey-black.png" />
+            </div>
+            <div class="group-chat">
+                <div class="group-chat__upper">
+                    <div class="group-chat__left-part">
+                        <img src="images/tablet3.PNG" alt="tablet-img" />
+                        <img src="images/oie_transparent.png" alt="phone-img" />
+                    </div>
+                    <div class="group-chat__right-part">
+                        <p class="background-with-content__text">Live fitness classes</p>
+                        <h1 class="background-with-content__text">Group classes & remote training.</h1>
+                        <p class="background-with-content__text">No zoom needed. We have a robust, built-in fitness
+                            class software of our own, packed full of features specific to fitness classes.
+                        </p>
+                        <button class="start-chatting__btn">Start Chatting</button>
+                    </div>
+                </div>
+                <div class="group-chat__bottom">
+                    <div class="time-saving live-classes">
+                        <i class="fa fa-camera"></i>
+                        <h3 class="background-with-content__text">Group fitness chat.</h3>
+                        <p class="background-with-content__text">Whether it’s yoga, HIIT, or a cardio class, host it
+                            virtually with <span class="background-with-content__text green-text">our group chat</span>.
+                        </p>
+                    </div>
+
+                    <div class="have-confidence interval-timers">
+                        <i class="fa fa-clock-o interval-clock"></i>
+                        <h3 class="background-with-content__text">Interval timers.</h3>
+                        <p class="background-with-content__text">Keep the class on track with an <span
+                                class="background-with-content__text green-text">interval timer</span> that uses both
+                            audio and visual cues.</p>
+                    </div>
+
+                    <div class="customizable fill">
+                        <i class="fa fa-square"></i>
+                        <h3 class="background-with-content__text">Fill empty class spots.</h3>
+                        <p class="background-with-content__text">Need to get some class spots filled? <span
+                                class="background-with-content__text green-text">List your class
+                                publicly</span> and charge a different admission fee for clients versus the public.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="triangles">
+                <img src="Gradient-picker/black-white.png" />
+            </div>
+        </section>
+
+        <section class="nutrition">
+            <div class="nutrition-content">
+                <div class="nutrition-content__upper">
+                    <div class="left-part nutrition">
+                        <p>Nutrition consulting, simplified.</p>
+                        <h1>Easily assign macros and meals.</h1>
+                        <p>We all know half of the battle is what we feed our bodies. Help clients out by assigning
+                            daily macro counts, foods they can use, and recipes they can pull inspiration from.
+                        </p>
+                        <button class="start-diet__btn">Start Diet</button>
+                    </div>
+                    <div class="right-part nutrition">
+                        <img src="images/cooking.jpg" alt="cooking-img" />
+                        <div class="nutrition-form">
+                            <div class="nutrition-form-upper">
+                                <p>Total Diet Macros</p>
+                                <span>Share</span>
+                            </div>
+                            <div class="macros">
+                                <div class="macros-values">
+                                    <p>Calories</p>
+                                    <p>2500</p>
+                                </div>
+                                <div class="macros-values">
+                                    <p>Protein</p>
+                                    <p>150</p>
+                                </div>
+                                <div class="macros-values">
+                                    <p>Calories</p>
+                                    <p>300</p>
+                                </div>
+                                <div class="macros-values">
+                                    <p>Calories</p>
+                                    <p>75</p>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nutrition__bottom">
+
+                    <div class="time-saving nutrition-list">
+                        <i class="fa fa-list"></i>
+                        <h3 class="background-with-content__text">Nutrition lists.</h3>
+                        <p class="background-with-content__text">Whether it's the <span
+                                class="background-with-content__text darkgreen-text">food list we provide</span> or one
+                            that
+                            you build yourself, never run out of options to keep your nutrition plans diverse.
+                        </p>
+                    </div>
+
+                    <div class="have-confidence share-plans">
+                        <i class="fa fa-exchange"></i>
+                        <h3 class="background-with-content__text">Assign personal macro plans.</h3>
+                        <p class="background-with-content__text"><span
+                                class="background-with-content__text darkgreen-text">Assign macro's </span>to clients
+                            and easily provide example foods and recipes for them.</p>
+                    </div>
+
+                    <div class="customizable mark-nutrition">
+                        <i class="fa fa-pie-chart"></i>
+                        <h3 class="background-with-content__text">Report progress.</h3>
+                        <p class="background-with-content__text">With our easy-to-use web platform, clients can simply
+                            report whether or not they hit their calories for the day by <span
+                                class="background-with-content__text darkgreen-text">marking assignments
+                                complete</span>.</p>
+                    </div>
+
+                    <h1 class="nutrition-text__background">Nutritions.</h1>
+                </div>
+            </div>
+        </section>
+        <hr class="str-line" />
+    </main>
+
+    <footer id="footer">
+        <section class="footer-wrapper">
+            <div class="footer__main-content">
+                <div class="quick-links footer-content">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#trustSection">About Us</a>
+                    <a href="Admin/admin-login.html">Admin Panel</a>
+                    <a href="calculator.html">Calorie Calculator</a>
+                    <a href="achievements-reviews.html">Achievements & Top Reviews</a>
+                    <a href="faq-accordion.html">FAQs</a>
+                    <a href="trainer-slider.html">Guide for Trainers</a>
+                </div>
+                <div class="contact-us footer-content">
+                    <h3>Contact Us</h3>
+                    <div class="email">
+                        <p><i class="fa fa-envelope"></i> Email:</p>
+                        <p>dstoynov2000@gmail.com</p>
+                        <p>d.y.stoynov@student.reading.ac.uk</p>
+                    </div>
+
+                    <div class="mobile-phone">
+                        <p><i class="fa fa-phone"></i> Mobile Number:</p>
+                        <p>+44 7394 30 1312</p>
+                        <p>+359 886 69 8093</p>
+                    </div>
+                </div>
+
+                <div class="footer-resources footer-content">
+                    <h3>Resources</h3>
+                    <a href="#">How to create a diet</a>
+                    <a href="#">How to create a workout plan</a>
+                    <a href="#">Most Common Exercises</a>
+                    <a href="#">Most unhealthy foods</a>
+                    <a href="#">Gym myths</a>
+                </div>
+
+                <div class="follow-us footer-content">
+                    <h3>Follow Us</h3>
+                    <div class="social-medias">
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom-content">
+                <div class="policy-copyright">
+                    <div class="policies">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <p>© 2022 Fitness Software, Inc. All Rights Reserved</p>
+                </div>
+                <hr class="footer-line" />
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts.js">
+    </script>
+
+</body>
+
+</html>

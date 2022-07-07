@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.faqs__section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.accordion-holder {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    padding: 10px 0 10px 15px;
+    font-size: 21px;
+    background-color: #fff;
+}
+
+.accordion-sign {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.accordion-sign i:first-child {
+    font-size: 21px;
+}
+
+.accordion-sign i:last-child {
+    display: none;
+    font-size: 21px;
+}
+
+.answer p {
+    padding: 21px;
+    font-size: 18px;
+}
+
+.answer {
+    max-height: 0;
+    background-color: rgba(94, 94, 94, 0.5);
+    color: #fff;
+    transition: max-height .5s ease-in;
+    overflow: hidden;
+}
+
+.faqs {
+    cursor: pointer;
+}
+
+.activeAccordion {
+    max-height: 305px;
+}
+
+.accordion-section__headline {
+    text-align: center;
+}
+
+.accordion-section__headline h1 {
+    font-size: 45px;
+    color: #fff;
+    text-shadow: 2px 2px #919191;
+    /* animation: reveal 5s; */
+}
+
+/* @keyframes reveal {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+} */
+
+.accordion-section__headline hr {
+    background-color: #fff;
+}
+
+.accordion-section__headline hr, .accordion-section__headline h1 {
+    margin-bottom: 35px;
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="trainer-dashboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Trainer-Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="account-management-holder">
+            <span class="account-management"><i class="fa fa-bell"></i> <span id="trainerUsernameHolder"><span
+                        id="trainerUsername"></span><span id="trainerLogout">Logout</span></span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="trainer-dashboard-features">
+            <div class="trainer-navmenu-holder">
+                <div class="logo-holder">
+                    <img src="../images/pngwing.com.png" />
+                </div>
+                <div class="navigation-holder">
+                    <nav class="trainer-navigation">
+                        <div class="active-sign-holder">
+                            <div class="nav-sign active-nav-sign"></div><a class="nav-btns">Clients</a>
+                        </div>
+                        <div class="active-sign-holder">
+                            <div class="nav-sign active-nav-sign"></div><a class="nav-btns">Training Programs</a>
+                        </div>
+                        <div class="active-sign-holder">
+                            <div class="nav-sign active-nav-sign"></div><a class="nav-btns">Tasks</a>
+                        </div>
+                        <div class="active-sign-holder">
+                            <div class="nav-sign active-nav-sign"></div><a class="nav-btns">Diet Plans</a>
+                        </div>
+                        <div class="active-sign-holder">
+                            <div class="nav-sign active-nav-sign"></div><a class="nav-btns">Bookings</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="trainerMenusHolder" class="trainer-features-holder">
+                <div id="navClients" class="trainer-features">
+                    <h1>Clients</h1>
+                    <hr />
+                    <div class="features-buttons-container">
+                        <a id="addClient" class="feature-button add-client__btn"><i class="fa fa-plus"></i> Add
+                            Client</a>
+                        <a id="openChatSystem" class="feature-button group-chat__btn"><i
+                                class="fa fa-location-arrow"></i> Group Chat</a>
+                        <a id="clientsGoalsBtn" class="feature-button all-clients__btn"><i class="fa fa-user"></i> All
+                            Clients</a>
+                        <!-- <a class="feature-button quick-links__btn"><i class="fa fa-caret-down"></i> Quick Links</a> -->
+                    </div>
+                    <input id="searchBar" class="searchbar" type="text" placeholder="Search...">
+                    <div id="usersHolder" class="users-holder">
+                        <!--Javascript-->
+                    </div>
+                </div>
+
+                <div class="navigation-workout">
+                    <form class="training-program_form" method="post">
+                        <hr />
+                        <div class="send-program">
+                            <span>Create Training Program</span>
+                            <button id="sendProgram" type="submit"
+                                onclick="AddTrainingProgramToUser(event)">Send</button>
+                        </div>
+                        <div class="objective_and_duration">
+                            <div class="program-objective">
+                                <p>Objective</p>
+                                <input id="programObjective" type="text" />
+                            </div>
+                            <div class="program-duration">
+                                <p>Weeks</p>
+                                <input id="programWeeks" type="text" />
+                            </div>
+                        </div>
+                        <div class="program-description_container">
+                            <div class="program-description">
+                                <a>Program Description</a>
+                                <textarea id="programTextarea" name="program-description"
+                                    placeholder="Write your program description here..." rows="9.5" cols="95"
+                                    required></textarea>
+                            </div>
+                            <div class="program-assignment">
+                                <label for="assignedProgram">Assigned To</label>
+                                <select name="assignedProgram" id="assignedProgram">
+                                    <!--All Users in Option Tags-->
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                    </form>
+                </div>
+
+                <div id="navTasks" class="navigation-tasks">
+                    <div class="assign-task-container">
+                        <form method="post">
+                            <div class="add-task">
+                                <span>Add Task</span>
+                                <button id="addTaskBtn" type="submit" onclick="AddTaskToUser(event)">Add Task</button>
+                            </div>
+                            <hr class="tasks-line" />
+                            <div class="task-description">
+                                <a>Task Description</a>
+                                <textarea id="taskTextarea" name="description" placeholder="Write a new task here."
+                                    rows="5" required></textarea>
+                            </div>
+                            <div class="task-assignment">
+                                <div class="task-assignment-left">
+                                    <label for="totalUsers">Assigned To</label>
+                                    <select name="totalUsers" id="totalUsers">
+                                        <!--All Users in Option Tags-->
+                                    </select>
+                                </div>
+                                <!-- <div class="vertical-line"></div>
+                                <div class="task-assignment-right">
+                                    <a>Task Difficulty</a>
+                                    <div>
+                                        <input type="radio" id="easy" name="task_difficulty" value="Easy">
+                                        <label for="easy">Easy</label><br>
+                                        <input type="radio" id="medium" name="task_difficulty" value="Medium">
+                                        <label for="medium">Medium</label><br>
+                                        <input type="radio" id="hard" name="task_difficulty" value="Hard">
+                                        <label for="hard">Hard</label><br>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="diet-plans-container">
+                    <h1>Nutritions</h1>
+                    <div class="nutrition-form_holder">
+                        <form class="trainer-nutrition-form" method="post">
+                            <div class="upper-form">
+                                <span>Total Diet Macros</span>
+                                <button id="shareNutritionBtn" type="submit"
+                                    onclick="AddNutritionToUser(event)">Share</button>
+                            </div>
+                            <div class="bottom-form">
+                                <div class="macros-container">
+                                    <div>
+                                        <p>Calories</p>
+                                        <input id="calories" type="text" />
+                                    </div>
+                                    <div>
+                                        <p>Protein</p>
+                                        <input id="protein" type="text" />
+                                    </div>
+                                    <div>
+                                        <p>Carbohydrates</p>
+                                        <input id="carbs" type="text" />
+                                    </div>
+                                    <div>
+                                        <p>Fats</p>
+                                        <input id="fats" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-form-line"></div>
+                            <div class="assigned-metrics">
+                                <label for="assignedMetrics">Assigned To</label>
+                                <select name="assignedMetrics" id="assignedMetrics">
+                                    <!--All Users in Option Tags-->
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="bookings">
+                    <div class="bookings-container">
+                        <h3>Bookings</h3>
+                        <hr />
+                        <div id="bookingsHolder">
+
+                        </div>
+                        <p id="noBookings">You have no private bookings yet!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="popups">
+            <div id="addClientPopup" class="add-client_popup">
+                <span>Click on username to add client</span>
+                <a id="closeAddClientPopup">X</a>
+                <hr />
+            </div>
+            <div id="chatSystem">
+                <div class="chat-header">
+                    <span>Group Chat System</span>
+                    <span id="closeChatSystem">X</span>
+                </div>
+                <div class="chat-main-section">
+                    <div class="rooms-container">
+                        <h5>Chat Rooms</h5>
+                        <h3 id="addChatRoom">+</h3>
+                        <h3 id="openMainChat">Main Room</h3>
+                        <div id="roomsHolder" class="rooms-holder">
+                            <!--All Chat Rooms Go Here-->
+                        </div>
+                    </div>
+                    <div class="right-chat-content">
+                        <div class="create-room-reminder">
+                            <p>Create group chat room and start communicating with your clients.</p>
+                        </div>
+                        <div id="roomCreation" class="room-creation">
+                            <p class="room-creation-title">Select members for this group:</p>
+                            <div id="chatMembersContainer" class="chat-members_container">
+                                <!--Chat member options go here as radio buttons-->
+                            </div>
+                            <div class="room-name_holder">
+                                <p>Room Name:</p>
+                                <input id="roomName" type="text" placeholder="Room Name..." />
+                            </div>
+                            <h4 id="createChatRoom">Create Chat Room</h4>
+                            <h4 id="cancelChatCreation">Cancel</h4>
+                        </div>
+                        <div id="chatMessageHolder" style="width: 100%; height: 90%; background-color: transparent;">
+                        </div>
+                        <div id="textField" class="send-message_holder">
+                            <input type="text" id="messageInput" placeholder="Type your message...">
+                            <button id="sendMessage">Send</button>
+                        </div>
+                        <div id="chatContainersHolder" style="width: 100%; height: 90%; background-color: transparent;">
+                        </div>
+                        <div id="roomsTextField">
+                            <input type="text" id="inputMessege" placeholder="Type your message...">
+                            <button id="sendMyMessage">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="viewClientsGoals" class="clients-goals_popup">
+                <span>Your clients' goals</span>
+                <a id="closeClientsGoalsWindow">X</a>
+                <hr />
+            </div>
+            <div id="deleteChatRoomPopUp">
+                <h3>Delete this room</h3>
+                <span id="deleteChatRoom">Delete</span>
+                <span id="cancelDeleting">Cancel</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-wrapper">
+            <div class="footer__main-content">
+                <div class="quick-links footer-content">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Booking</a>
+                    <a href="#">Calorie Calculator</a>
+                    <a href="#">Achievements & Top Reviews</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Guide for Trainers</a>
+                </div>
+                <div class="contact-us footer-content">
+                    <h3>Contact Us</h3>
+                    <div class="email">
+                        <p><i class="fa fa-envelope"></i> Email:</p>
+                        <p>dstoynov2000@gmail.com</p>
+                        <p>d.y.stoynov@student.reading.ac.uk</p>
+                    </div>
+
+                    <div class="mobile-phone">
+                        <p><i class="fa fa-phone"></i> Mobile Number:</p>
+                        <p>+44 7394 30 1312</p>
+                        <p>+359 886 69 8093</p>
+                    </div>
+                </div>
+
+                <div class="footer-resources footer-content">
+                    <h3>Resources</h3>
+                    <a href="#">How to create a diet</a>
+                    <a href="#">How to create a workout plan</a>
+                    <a href="#">Most Common Exercises</a>
+                    <a href="#">Most unhealthy foods</a>
+                    <a href="#">Gym myths</a>
+                </div>
+
+                <div class="follow-us footer-content">
+                    <h3>Follow Us</h3>
+                    <div class="social-medias">
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom-content">
+                <div class="policy-copyright">
+                    <div class="policies">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <p>© 2022 Fitness Software, Inc. All Rights Reserved</p>
+                </div>
+                <hr class="footer-line" />
+            </div>
+        </section>
+    </footer>
+
+    <script src="../js/signalr/dist/browser/signalr.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="trainer-dashboard.js"></script>
+</body>
+
+</html>

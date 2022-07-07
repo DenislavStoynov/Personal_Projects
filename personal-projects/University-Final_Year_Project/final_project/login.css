@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background-image: url(Gradient-picker/login-background.png);
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.signin-btn.backtohomepage-btn {
+    margin: 18px 31px 0 0;
+}
+
+.backtohomepage-btn a{
+    text-decoration: none;
+}
+
+.login-form__section, .faqs__section {
+    padding: 5% 0;
+}
+
+.login-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 255px;
+    margin: 0 auto;
+    padding: 75px;
+    background-color: rgba(0,0,0,.7);
+    border: 9px solid rgba(0,0,0,.5);
+    border-radius: 9px;
+}
+
+.header-arrow-down__container {
+    position: relative;
+    margin-bottom: 71px;
+}
+
+.header-arrow-down__container h1 {
+    margin-bottom: 5px;
+    font-size: 49px;
+    font-weight: 500;
+}
+
+.header-arrow-down__container img {
+    position: absolute;
+    left: 41%;
+    width: 30px; 
+    height: 30px; 
+    transform: rotate(-90deg);
+    animation-name: arrowAnimation;
+    animation-duration: 1.1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowAnimation {
+    0%  {bottom: -30px}
+    100% {bottom: -50px}
+  }
+
+.login-form input, .signup-form input {
+    display: block;
+}
+
+.login-form input::placeholder, .signup-form input::placeholder {
+    color: #fff;
+}
+
+.login-form button, .signup-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px 30px 15px 15px;
+    border: none;
+    background-color: rgb(160, 201, 255);
+    font-size: 18px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: rgb(117, 177, 255);
+}
+
+.username-holder, .password-holder, .email-holder {
+    display: flex;
+    padding: 15px 69.8px 15px 15px;
+    margin-bottom: 20px;
+    background-color: rgba(90, 90, 90, .3);
+    border-radius: 25px;
+}
+
+.username-holder i, .password-holder i, .email-holder i {
+    color: #fff;
+    margin-right: 9px;
+}
+
+.username-holder input, .password-holder input, .email-holder input {
+    border: none;
+    background-color: transparent;
+}
+
+.not-registered p, .not-registered a, .questions {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.not-registered {
+    display: flex;
+}
+
+.not-registered p {
+    margin-right: 89px;
+    color: #fff;
+}
+
+.registered p {
+    margin-right: 139px;
+}
+
+.not-registered a {
+    color: rgb(160, 201, 255);
+}
+
+/* Sign Up Form */
+
+.questions p {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.options input {
+    display: initial;
+}
+
+.options label {
+    display: inline-block;
+
+}
+
+.questionare {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
+    border-radius: 5px;
+}
+
+.first-question, .second-question {
+    margin-bottom: 20px;
+}

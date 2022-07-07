@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background-image: url(Gradient-picker/login-background.png);
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.calculator {
+    display: flex;
+    padding: 3% 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-container, .calculator-results {
+    width: 50%;
+}
+
+.calculator-container {
+    margin-right: 25px;
+}
+
+.calculator-container form {
+    padding: 35px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.calculator-container form div{
+    margin-bottom: 31px;
+}
+
+.calculator-header {
+    padding: 5px 0 5px 9px;
+    background-color: #3b3b3b;
+    font-size: 23px;
+    border-bottom: 3px solid rgb(160, 201, 255);
+}
+
+.calculator-header i {
+    color: rgb(160, 201, 255);
+}
+
+.calculator-header span {
+    color: #fff;
+}
+
+.units-container p, .gender-container p, .weight-container label, .height-container label, .age-container label, .activity-container label {
+    display: inline-block;
+}
+
+.units-container input, .gender-container input, .height-container input {
+    margin-left: 5px;
+}
+
+.weight-container input {
+    margin-left: 3px;
+}
+
+.activity-container select {
+    margin-left: 2px;
+}
+
+.age-container input {
+    margin-left: 28px;
+}
+
+.weight-container input, .height-container input, .age-container input, .activity-container select {
+    padding: 5px 0 5px 5px;
+    border: 3px solid rgb(160, 201, 255);
+    background-color: rgb(247, 250, 255);
+}
+
+.calculator-button {
+    font-size: 18px;
+    padding: 8px 21px;
+    background-color: rgb(160, 201, 255);
+    border: 5px solid rgb(247, 250, 255);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.calculator-button:hover {
+    background-color: rgb(247, 250, 255);
+    border: 5px solid rgb(160, 201, 255);
+}
+
+.fa.fa-sort-down.calc {
+    font-size: 21px;
+    transform: rotate(-90deg);
+    color: #000;
+}
+
+/* Calculator Results */
+
+.calculator-objectives {
+    display: flex;
+}
+
+.calculator-objectives {
+    margin-bottom: 12px;
+}
+
+.calculator-objectives:last-child {
+    margin-bottom: 0;
+}
+
+.calculator-results__headline {
+    width: 65%;
+    padding: 25px 0 20px 0;
+    font-size: 29px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+.calculator-results__holder {
+    width: 35%;
+    padding: 20px 0;
+    background-color: rgba(160, 201, 255, .9);
+    text-align: center;
+}
+
+.calculator-result {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.calories-day__text {
+    font-style: italic;
+    color: #444444;
+}

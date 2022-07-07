@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="faq-accordion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fitness Software</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav__container">
+            <div class="logo"><a href="index.html"><img src="images/pngwing.com.png" alt="fitness-logo"
+                        class="fitness-logo" /></a></div>
+            <nav class="nav-holder">
+                <div><a href="Admin/admin-login.html" class="nav-item">Admin Panel</a></div>
+                <div class="dropdown__menu">
+                    <a href="#" class="nav-item resources">Resources</a><i class="fa fa-sort-down"></i>
+                    <div class="dropdown-menu__content">
+                        <a href="calculator.html"><i class="fa fa-question-circle"> </i>Calorie Calculator</a>
+                        <a href="achievements-reviews.html"><i class="fa fa-pencil"></i> Achievements & Top Reviews</a>
+                        <a href="#"><i class="fa fa-search-plus"></i> FAQs</a>
+                        <a href="trainer-slider.html"><i class="fa fa-file"></i> How to become an online personal
+                            trainer</a>
+                    </div>
+                </div>
+                <div class="nav-child__space"><a href="#" class="nav-item">Contact Us</a></div>
+                <div class="nav-child__space"><a href="#" class="nav-item">About Us</a></div>
+            </nav>
+
+            <nav id="navMobile" class="mobile-navigation" data-visible="false">
+                <a href="Admin/admin-login.html" class="nav-mobile-item">Admin Panel</a>
+                <a href="#" class="nav-mobile-item">Help Center</a>
+                <a href="#" class="nav-mobile-item">Insights & Updates</a>
+                <a href="#" class="nav-mobile-item">FAQs</a>
+                <a href="#" class="nav-mobile-item">Personal Trainer Guide</a>
+                <a href="#" class="nav-mobile-item">Contact Us</a>
+                <a href="#" class="nav-mobile-item">About Us</a>
+            </nav>
+        </div>
+        <div class="signin-btn backtohomepage-btn">
+            <a href="index.html"><button class="backtohomepage-clients__btn">Back</button></a>
+        </div>
+        <div class="hamburger-btn" cross-visible="false">
+            <div class="hamburger-up">
+                <div class="exit-nav__line"></div>
+            </div>
+            <div class="hamburger-mid"></div>
+            <div class="hamburger-down"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="faqs__section">
+            <div class="accordion-section__headline">
+                <h1>Fitness Software FAQs</h1>
+                <hr class="str-line" />
+            </div>
+            <div class="accordion-holder">
+                <div class="first-question__faqs faqs">
+                    <div class="question">
+                        <span>Is the website fully responsive?</span>
+                        <div class="accordion-sign">
+                            <i class="fa fa-plus plus" style="cursor: pointer;"></i>
+                            <i class="fa fa-minus minus" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+
+                    <div class="answer accordion__first-answer">
+                        <p>At this point, only a few of the pages are accessible through mobile phones and Ipads.</p>
+                    </div>
+                </div>
+
+                <div class="second-question__faqs faqs">
+                    <div class="question">
+                        <span>Can I create a personal trainer account?</span>
+                        <div class="accordion-sign">
+                            <i class="fa fa-plus plus" style="cursor: pointer;"></i>
+                            <i class="fa fa-minus minus" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+
+                    <div class="answer accordion__first-answer">
+                        <p>If you are just a client, you cannot have a personal trainer account. On this platform, there
+                            are three personal trainers - for beginners, mid level and advanced users. The admin is
+                            responsible for creating a trainer account.</p>
+                    </div>
+                </div>
+
+                <div class="third-question__faqs faqs">
+                    <div class="question">
+                        <span>Can I book private meetings with my personal trainer?</span>
+                        <div class="accordion-sign">
+                            <i class="fa fa-plus plus" style="cursor: pointer;"></i>
+                            <i class="fa fa-minus minus" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+
+                    <div class="answer accordion__first-answer">
+                        <p>Yes, you can! If you have any additional question, related to your training program, diet,
+                            tasks or other fitness-related queries, you can always book a private meeting through the
+                            booking system on the home page of your dashboard. After that your trainer can create a
+                            private chatting room where you can ask him wherever you want.</p>
+                    </div>
+                </div>
+
+                <div class="fourth-question__faqs faqs">
+                    <div class="question">
+                        <span>How to mark a task as complete?</span>
+                        <div class="accordion-sign">
+                            <i class="fa fa-plus plus" style="cursor: pointer;"></i>
+                            <i class="fa fa-minus minus" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+
+                    <div class="answer accordion__first-answer">
+                        <p>You can mark your tasks, diet plans and training programs as complete as soon as you finish
+                            them. This can happen when you click the ,,Complete'' button or the ,,✓'' sign.</p>
+                    </div>
+                </div>
+
+                <div class="fifth-question__faqs faqs">
+                    <div class="question">
+                        <span>Will I receive dietary guidelines, provided by my personal trainer? </span>
+                        <div class="accordion-sign">
+                            <i class="fa fa-plus" style="cursor: pointer;"></i>
+                            <i class="fa fa-minus" style="cursor: pointer;"></i>
+                        </div>
+                    </div>
+
+                    <div class="answer accordion__first-answer">
+                        <p>Yes! When you create your account, you need to fill the form which will help us to determine
+                            your current level and you will be assigned to the most appropriate personal trainer.
+                            Depending on your goals, your coach will provide you with different weekly nutrition plans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-wrapper">
+            <div class="footer__main-content">
+                <div class="quick-links footer-content">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="Admin/admin-login.html">Admin Panel</a>
+                    <a href="calculator.html">Calorie Calculator</a>
+                    <a href="achievements-reviews.html">Achievements & Top Reviews</a>
+                    <a href="#">FAQs</a>
+                    <a href="trainer-slider.html">Guide for Trainers</a>
+                </div>
+                <div class="contact-us footer-content">
+                    <h3>Contact Us</h3>
+                    <div class="email">
+                        <p><i class="fa fa-envelope"></i> Email:</p>
+                        <p>dstoynov2000@gmail.com</p>
+                        <p>d.y.stoynov@student.reading.ac.uk</p>
+                    </div>
+
+                    <div class="mobile-phone">
+                        <p><i class="fa fa-phone"></i> Mobile Number:</p>
+                        <p>+44 7394 30 1312</p>
+                        <p>+359 886 69 8093</p>
+                    </div>
+                </div>
+
+                <div class="footer-resources footer-content">
+                    <h3>Resources</h3>
+                    <a href="#">How to create a diet</a>
+                    <a href="#">How to create a workout plan</a>
+                    <a href="#">Most Common Exercises</a>
+                    <a href="#">Most unhealthy foods</a>
+                    <a href="#">Gym myths</a>
+                </div>
+
+                <div class="follow-us footer-content">
+                    <h3>Follow Us</h3>
+                    <div class="social-medias">
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom-content">z
+                <div class="policy-copyright">
+                    <div class="policies">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <p>© 2022 Fitness Software, Inc. All Rights Reserved</p>
+                </div>
+                <hr class="footer-line" />
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts.js">
+    </script>
+
+</body>
+
+</html>

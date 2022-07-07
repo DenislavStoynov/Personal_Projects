@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="user-dashboard.css">
+    <link rel="stylesheet" href="trainer-dashboard.css" />
+    <link rel="stylesheet" href="admin-dashboard.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Your-Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="account-management-holder">
+
+            <span id="openChatSystem" class="feature-button group-chat__btn"><i class="fa fa-location-arrow"></i>
+                Group
+                Chat</span>
+
+            <span class="account-management"><span>Welcome: </span><span id="adminText"></span>
+                &nbsp;&nbsp;<span id="logout" onclick="AdminLogout()">Logout</span></span>
+        </div>
+        <div class="hamburger-btn" cross-visible="false">
+            <div class="hamburger-up">
+                <div class="exit-nav__line"></div>
+            </div>
+            <div class="hamburger-mid"></div>
+            <div class="hamburger-down"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-dashboard-features">
+            <h1 style="text-align: center;">Admin Panel</h1>
+            <div class="simple-line"></div>
+            <h3>Users List</h3>
+            <div id="usersList">
+                <!-- <div class="holder">
+                    <span>Pesho</span>
+                    <a style="float: right">Block</a>
+                </div> -->
+            </div>
+            <h3>Trainers List</h3>
+            <div id="trainersList">
+
+            </div>
+            <h3>Subscribers List</h3>
+            <div id="subscribersList">
+
+            </div>
+            <div class="register-trainer">
+                <form id="trainerRegistrationForm" method="post">
+                    <div>
+                        <h3>Trainer Registration</h3>
+                        <input id="trainerEmail" type="email" placeholder="Email..." />
+                        <input id="trainerPassword" type="password" placeholder="Password..." />
+                        <input id="trainerUsr" type="text" placeholder="Username..." />
+                        <button type="submit" onclick="RegisterTrainer(event)">Register</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="popups">
+            <div id="chatSystem">
+                <div class="chat-header">
+                    <span>Group Chat System</span>
+                    <span id="closeChatSystem">X</span>
+                </div>
+                <div class="chat-main-section">
+                    <div class="rooms-container">
+                        <h5>Chat Rooms</h5>
+                        <h3 id="openMainChat">Main Room</h3>
+                        <div id="roomsHolder" class="rooms-holder">
+                            <!--All Chat Rooms Go Here-->
+                        </div>
+                    </div>
+                    <div class="right-chat-content">
+                        <div id="openRoomReminder" class="create-room-reminder">
+                            <p>Open group chat room and start communicating with other clients and trainers.</p>
+                        </div>
+                        <div id="chatMessageHolder" style="width: 100%; height: 90%; background-color: transparent;">
+                        </div>
+                        <div id="textField" class="send-message_holder">
+                            <input type="text" id="messageInput" placeholder="Type your message...">
+                            <button id="sendMessage">Send</button>
+                        </div>
+                        <div id="chatContainersHolder" style="width: 100%; height: 90%; background-color: transparent;">
+                        </div>
+                        <div id="roomsTextField">
+                            <input type="text" id="inputMessege" placeholder="Type your message...">
+                            <button id="sendMyMessage">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-wrapper">
+            <div class="footer__main-content">
+                <div class="quick-links footer-content">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Booking</a>
+                    <a href="#">Calorie Calculator</a>
+                    <a href="#">Achievements & Top Reviews</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Guide for Trainers</a>
+                </div>
+                <div class="contact-us footer-content">
+                    <h3>Contact Us</h3>
+                    <div class="email">
+                        <p><i class="fa fa-envelope"></i> Email:</p>
+                        <p>dstoynov2000@gmail.com</p>
+                        <p>d.y.stoynov@student.reading.ac.uk</p>
+                    </div>
+
+                    <div class="mobile-phone">
+                        <p><i class="fa fa-phone"></i> Mobile Number:</p>
+                        <p>+44 7394 30 1312</p>
+                        <p>+359 886 69 8093</p>
+                    </div>
+                </div>
+
+                <div class="footer-resources footer-content">
+                    <h3>Resources</h3>
+                    <a href="#">How to create a diet</a>
+                    <a href="#">How to create a workout plan</a>
+                    <a href="#">Most Common Exercises</a>
+                    <a href="#">Most unhealthy foods</a>
+                    <a href="#">Gym myths</a>
+                </div>
+
+                <div class="follow-us footer-content">
+                    <h3>Follow Us</h3>
+                    <div class="social-medias">
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom-content">
+                <div class="policy-copyright">
+                    <div class="policies">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <p>© 2022 Fitness Software, Inc. All Rights Reserved</p>
+                </div>
+                <hr class="footer-line" />
+            </div>
+        </section>
+    </footer>
+    <script src="../js/signalr/dist/browser/signalr.js"></script>
+    <script src="../js/userChat.js"></script>
+    <script src="admin-dashboard.js">
+    </script>
+</body>
+
+</html>

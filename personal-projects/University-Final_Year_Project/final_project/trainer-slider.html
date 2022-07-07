@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="trainer-slider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fitness Software</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-nav__container">
+            <div class="logo"><a href="index.html"><img src="images/pngwing.com.png" alt="fitness-logo"
+                        class="fitness-logo" /></a></div>
+            <nav class="nav-holder">
+                <div><a href="Admin/admin-login.html" class="nav-item">Admin Panel</a></div>
+                <div class="dropdown__menu">
+                    <a href="#" class="nav-item resources">Resources</a><i class="fa fa-sort-down"></i>
+                    <div class="dropdown-menu__content">
+                        <a href="calculator.html"><i class="fa fa-question-circle"> </i> Calorie Calculator</a>
+                        <a href="achievements-reviews.html"><i class="fa fa-pencil"></i> Achievements & Top Reviews</a>
+                        <a href="faq-accordion.html"><i class="fa fa-search-plus"></i> FAQs</a>
+                        <a href="#"><i class="fa fa-file"></i> How to become an online personal trainer</a>
+                    </div>
+                </div>
+                <div class="nav-child__space"><a href="#" class="nav-item">Contact Us</a></div>
+                <div class="nav-child__space"><a href="#" class="nav-item">About Us</a></div>
+            </nav>
+
+            <nav id="navMobile" class="mobile-navigation" data-visible="false">
+                <a href="Admin/admin-login.html" class="nav-mobile-item">Admin Panel</a>
+                <a href="#" class="nav-mobile-item">Help Center</a>
+                <a href="#" class="nav-mobile-item">Insights & Updates</a>
+                <a href="#" class="nav-mobile-item">FAQs</a>
+                <a href="#" class="nav-mobile-item">Personal Trainer Guide</a>
+                <a href="#" class="nav-mobile-item">Contact Us</a>
+                <a href="#" class="nav-mobile-item">About Us</a>
+            </nav>
+        </div>
+        <div class="signin-btn backtohomepage-btn">
+            <a href="index.html"><button class="backtohomepage-clients__btn">Back</button></a>
+        </div>
+        <div class="hamburger-btn" cross-visible="false">
+            <div class="hamburger-up">
+                <div class="exit-nav__line"></div>
+            </div>
+            <div class="hamburger-mid"></div>
+            <div class="hamburger-down"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="trainer-slider">
+            <div class="trainer-slider_content">
+                <div class="slider-section__headline">
+                    <h1>Tips for personal trainers</h1>
+                    <hr class="str-line" />
+                </div>
+                <div id="sliderWrapper" class="slider-wrapper">
+                    <i id="sliderBtnLeft" class="fas fa-chevron-left"></i>
+                    <div class="sliderWrapper_wrapper">
+                        <div id="sliderContent" class="slider-content">
+                            <img src="images/Slider_Images/main1.png" />
+                            <img src="images/Slider_Images/11.png" />
+                            <img src="images/Slider_Images/12.png" />
+                            <img src="images/Slider_Images/13.png" />
+                            <img src="images/Slider_Images/14.png" />
+                            <img src="images/Slider_Images/15.png" />
+                            <img src="images/Slider_Images/16.png" />
+                            <img src="images/Slider_Images/17.png" />
+                            <img src="images/Slider_Images/18.png" />
+                            <img src="images/Slider_Images/19.png" />
+                            <img src="images/Slider_Images/20.png" />
+                            <img src="images/Slider_Images/21.png" />
+                            <img src="images/Slider_Images/22.png" />
+                            <img src="images/Slider_Images/23.png" />
+                            <img src="images/Slider_Images/24.png" />
+                        </div>
+                    </div>
+                    <i id="sliderBtnRight" class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="trainer-quiz">
+            <h1>QUIZ</h1>
+            <h3>How fit is your knowledge? Let's find out!</h3>
+            <div id="progressBarContainer" class="progress-bar-container">
+                <div class="progress-bar"><div id="progressBar"><span id="percent">0%</span></div></div>
+                <button id="startQuiz">Start</button>
+            </div>
+
+            <div id="quizResultContainer">
+                <div class="quiz-result_holder">
+                    <div id="quizResult">A</div>
+                    <div class="passed-container">
+                        <h2 id="passed">You passed!</h2>
+                        <p>Your score is: <span id="scoreText"></span> / 100</p>
+                    </div>
+                </div>
+                <div class="quiz-result-btns_holder">
+                    <button id="tryAgain">Try Again</button>
+                    <button id="correctAnswers">+ View Correct Answers</button>
+                </div>
+            </div>
+
+            <div id="correctAnswersContainer">
+                <h2>Correct Answers</h2>
+                <div id="presentAnswers">
+                    <!--All correct answers goes here-->
+                </div>
+                <div class="back-to-results"><button id="backToResults">Back</button></div>
+            </div>
+
+            <div id="quizContainer" class="quiz-questions_container">
+                <div class="questions-counter_holder">
+                    <p class="questions-counter">Question <span id="questionCounter">1</span> of 10</p>
+                </div>
+                <div class="quiz-question_holder">
+                    <p class="quiz-question quiz-question_1">We all know that calcium is good for us, but what does it
+                        actually do?</p>
+                </div>
+                <div class="quiz-answers">
+                    <div class="answers">
+                        <div class="quiz-answers_holder first">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Eases Sexual Dysfunction</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Plays a Major Role in Respiratory Function</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Builds and Protects Bones</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Improves Endurance</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder second">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Health-Influenced Irregular Training</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>High-Intensity Instep Tempo</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Heightened Incline Interval Training</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>High-Intensity Interval Training</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder third">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Lower Back</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Hip</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Upper Chest</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Neck</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder fourth">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Increased Strength</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Improved Social Skills</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Higher Workout Intensities</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Enhanced Exertion During Exercise</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder fifth">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Ball-and-Socket</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Hinge</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Pivot</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Saddle</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder sixth">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Oxygen</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Cholesterol</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>White Blood Cells</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Iron</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder seventh">
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Certified Personal Trainer</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Current Physical Trainer</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Certified Physical Trainer</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Confirmed Partner Team</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder eighth">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Resistance Band</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Foam Roller</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Yoga Mat</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Stability Ball</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder ninth">
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Flexibility</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Memory</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Stamina</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Coordination</p>
+                            </div>
+                        </div>
+                        <div class="quiz-answers_holder tenth">
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>A</span></div>
+                                <p>Iliopsoas</p>
+                            </div>
+                            <div class="quiz-left correct">
+                                <div class="answer-letter"><span>B</span></div>
+                                <p>Gluteus Maximus</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>C</span></div>
+                                <p>Deltoid</p>
+                            </div>
+                            <div class="quiz-left">
+                                <div class="answer-letter"><span>D</span></div>
+                                <p>Quadriceps Femoris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="quizBtnsHoler" class="quiz-btns_holder">
+                <button id="quizPrev">Back</button>
+                <button id="quizNext">Next</button>
+                <button id="finishButton">Finish</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-wrapper">
+            <div class="footer__main-content">
+                <div class="quick-links footer-content">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="Admin/admin-login.html">Admin Panel</a>
+                    <a href="#">Calorie Calculator</a>
+                    <a href="achievements-reviews.html">Achievements & Top Reviews</a>
+                    <a href="faq-accordion.html">FAQs</a>
+                    <a href="#">Guide for Trainers</a>
+                </div>
+                <div class="contact-us footer-content">
+                    <h3>Contact Us</h3>
+                    <div class="email">
+                        <p><i class="fa fa-envelope"></i> Email:</p>
+                        <p>dstoynov2000@gmail.com</p>
+                        <p>d.y.stoynov@student.reading.ac.uk</p>
+                    </div>
+
+                    <div class="mobile-phone">
+                        <p><i class="fa fa-phone"></i> Mobile Number:</p>
+                        <p>+44 7394 30 1312</p>
+                        <p>+359 886 69 8093</p>
+                    </div>
+                </div>
+
+                <div class="footer-resources footer-content">
+                    <h3>Resources</h3>
+                    <a href="#">How to create a diet</a>
+                    <a href="#">How to create a workout plan</a>
+                    <a href="#">Most Common Exercises</a>
+                    <a href="#">Most unhealthy foods</a>
+                    <a href="#">Gym myths</a>
+                </div>
+
+                <div class="follow-us footer-content">
+                    <h3>Follow Us</h3>
+                    <div class="social-medias">
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_bottom-content">
+                <div class="policy-copyright">
+                    <div class="policies">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <p>© 2022 Fitness Software, Inc. All Rights Reserved</p>
+                </div>
+                <hr class="footer-line" />
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts.js">
+    </script>
+    <script src="trainer-slider.js">
+    </script>
+</body>
+
+</html>

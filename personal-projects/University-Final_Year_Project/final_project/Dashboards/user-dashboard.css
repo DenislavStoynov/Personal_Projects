@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background-image: url(../Gradient-picker/login-background.png);
+    background-position: 50% 0%;
+    background-size: 2500px;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.account-management-holder {
+    display: inline-block;
+    margin: 25px 31px 0 0;
+}
+
+.account-management {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#logout {
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Main Dashboard Content */
+
+.user-dashboard-features {
+    display: flex;
+}
+
+.user-navmenu-holder {
+    width: 17%;
+    padding-bottom: 135px;
+    background-image: url(../Gradient-picker/black.png);
+}
+
+.user-navigation {
+    display: inline-block;
+}
+
+.user-navigation a {
+    display: block;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-navigation a:hover {
+    color: #cfcfcf;
+}
+
+.user-features-holder {
+    width: 83%;
+    padding: 25px 0 0 25px;
+    background-color: rgb(251, 251, 251);
+}
+
+/* User Dashboard Header */
+
+.user-features-holder {
+    padding-right: 25px;
+}
+
+.user-progress_container {
+    margin-bottom: 75px;
+}
+
+.user-dashboard__holder h1 {
+    margin-bottom: 25px;
+    font-size: 31px;
+    text-align: center;
+}
+
+.user-progress_container h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.progress-bars-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.progress-bars-holder p {
+    font-size: 19px;
+}
+
+.workouts-progressbar, .tasks-progressbar, .nutrition-progressbar {
+    display: block;
+}
+
+.workouts-progressbar p, .tasks-progressbar p, .nutrition-progressbar p {
+    margin-bottom: 5px;
+}
+
+.parent-progress-bar {
+    position: relative;
+    display: flex;
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 3px;
+}
+
+#workoutProgress, #tasksProgress, #nutritionProgress {
+    position: absolute;
+    width: 0%;
+    background-color: #00ff8c;
+    z-index: 101;
+}
+
+#workoutRegress, #tasksRegress, #nutritionRegress {
+    width: 100%;
+    background-color: #ff4b4b;
+}
+
+#workoutProgress, #workoutRegress, #tasksProgress, #tasksRegress, #nutritionProgress, #nutritionRegress {
+    height: 21px;
+    border-radius: 3px;
+}
+
+.booking-form h2 {
+    margin-bottom: 11px;
+}
+
+.booking-form {
+    margin-bottom: 35px;
+    padding: 15px 25px;
+    background-color: #ccc;
+    border: 2px solid #000;
+}
+
+.booking-system-description button{
+   float: right;
+   margin-right: 91px;
+   padding: 9px 19px;
+   font-size: 19px;
+   border: 3px solid #000;
+   background-color: #000;
+   color: #fff;
+   cursor: pointer;
+   transition: .3s ease-in-out;
+}
+
+.booking-system-description button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.booking-system_container {
+    margin-bottom: 45px;
+}
+
+.user-dashboard-footer span:nth-of-type(2) {
+    float: right;
+    font-size: 19px;
+}
+
+/* User Tasks */
+
+.to-do-list {
+    height: 350px;
+}
+
+/* Training Program */
+
+#finishProgram {
+    float: right;
+    padding: 5px 19px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+}
+
+#finishProgram:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+#userProgramObjective, #userWeeks, #userTrainingDescription {
+    font-size: 21px;
+}
+
+#userProgramObjective {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#userTrainingDescription, #userProgramObjective, #userWeeks {
+    background-color: rgb(224, 237, 255);
+    resize: none;
+}
+
+#userProgramObjective::-webkit-scrollbar {
+    height: 12px;               /* width of the entire scrollbar */
+}
+  
+  #userProgramObjective::-webkit-scrollbar-track {
+    background: #ccc;        /* color of the tracking area */
+  }
+  
+  #userProgramObjective::-webkit-scrollbar-thumb {
+    background-color: rgb(103, 103, 103);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+/* Nutrition */
+
+#completeNutritionBtn {
+    float: right;
+}

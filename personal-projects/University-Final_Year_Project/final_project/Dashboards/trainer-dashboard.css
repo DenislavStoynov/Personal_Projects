@@ -1,0 +1,775 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-image: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    height: 45px;
+    background-image: url(../Gradient-picker/black.png);
+}
+
+.account-management-holder {
+    margin: 11px 21px 0 0;
+}
+
+#trainerUsername {
+    margin-right: 25px;
+    color: #fff;
+}
+
+.account-management i,
+#trainerLogout {
+    color: #fff;
+    cursor: pointer;
+}
+
+.fa.fa-bell {
+    margin-right: 35px;
+}
+
+/* Main Trainer Dashboard */
+
+.trainer-dashboard-features {
+    display: flex;
+}
+
+.trainer-navmenu-holder {
+    width: 17%;
+    padding-bottom: 135px;
+    background-image: url(../Gradient-picker/black.png);
+}
+
+.logo-holder {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.logo-holder img {
+    width: 105px;
+    height: 75px;
+    cursor: pointer
+}
+
+.navigation-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.trainer-navigation {
+    display: inline-block;
+}
+
+.trainer-navigation a {
+    display: block;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.trainer-navigation a:hover {
+    color: #cfcfcf;
+}
+
+.active-nav-sign {
+    display: inline-block;
+    visibility: hidden;
+    width: 11px;
+    height: 33px;
+    background-color: #808080;
+    border-radius: 3px;
+}
+
+.active-sign-holder {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+/* Second Part of Main */
+
+.trainer-features-holder {
+    width: 83%;
+    padding: 25px 0 0 25px;
+}
+
+/* Clients Nav */
+
+.trainer-features h1 {
+    margin-bottom: 21px;
+    font-size: 41px;
+    font-weight: 600;
+    color: rgb(60, 60, 60);
+}
+
+.trainer-features hr {
+    width: 95%;
+    margin-bottom: 31px;
+}
+
+.features-buttons-container {
+    margin-bottom: 15px;
+}
+
+.feature-button {
+    cursor: pointer;
+}
+
+.feature-button:first-child:hover,
+.feature-button:nth-of-type(2):hover,
+.feature-button:nth-of-type(3):hover,
+.feature-button:last-child:hover {
+    color: #fff;
+    transition: .15s ease-in;
+}
+
+.feature-button:first-child:hover {
+    background-color: rgb(0, 89, 255);
+}
+
+.feature-button:nth-of-type(2):hover {
+    background-color: rgb(0, 168, 28);
+}
+
+.feature-button:nth-of-type(3):hover {
+    background-color: rgb(0, 217, 255);
+}
+
+.feature-button:last-child:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.searchbar {
+    width: 95%;
+    margin-bottom: 25px;
+    padding: 6px 0 5px 6px;
+    border: 1.6px solid rgb(186, 186, 186);
+    border-radius: 5px;
+}
+
+.main-div,
+.progress-holder {
+    display: flex;
+}
+
+.main-div {
+    margin-bottom: 25px;
+}
+
+.progress-holder {
+    margin: 0 auto;
+}
+
+.workout-progress-holder,
+.tasks-progress-holder {
+    margin-right: 55px;
+}
+
+.main-div p {
+    font-size: 1.17em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.username-paragraph {
+    margin-top: 18px;
+}
+
+.workout-div,
+.task-div,
+.nutrition-div {
+    width: 230px;
+    height: 16px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+/* Tasks Nav */
+
+.navigation-tasks {
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.assign-task-container,
+.to-do-list,
+.bookings-container {
+    padding: 25px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    box-shadow: 0px 1px 9px #ccc;
+}
+
+.assign-task-container {
+    margin-bottom: 25px;
+}
+
+.add-task,
+.tasks-line,
+.task-description {
+    margin-bottom: 19px;
+}
+
+.add-task span {
+    font-size: 31px;
+    font-weight: bold;
+}
+
+#addTaskBtn {
+    float: right;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(92, 19, 19);
+    color: #fff;
+    transition: .15s ease-in-out;
+    cursor: pointer
+}
+
+#addTaskBtn:hover {
+    background-color: rgb(191, 43, 43)
+}
+
+.task-description,
+.task-assignment-left
+
+/*.task-assignment-right*/
+    {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-description a,
+.task-assignment-left label
+
+/*, .task-assignment-right a*/
+    {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #3366cc;
+}
+
+.task-assignment {
+    display: flex;
+}
+
+.task-assignment-left
+
+/*, .task-assignment-right*/
+    {
+    width: 49.5%;
+}
+
+.task-assignment-left {
+    margin-right: 55px;
+}
+
+/*
+.vertical-line {
+    width: 0.15%;
+    height: 115px;
+    margin-right: 11px;
+    background-color: #ccc;
+}*/
+
+.to-do-list {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.to-do-list h1 {
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #3366cc;
+}
+
+.to-do-list hr {
+    margin-bottom: 25px;
+}
+
+.tasks-div-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Nutrition Navigation */
+
+.nutrition-form_holder {
+    margin-bottom: 25px;
+    padding: 35px 45px;
+    background-color: #008046;
+    border-radius: 5px;
+}
+
+.trainer-nutrition-form hr {
+    border: 2px solid #ccc;
+}
+
+#shareNutritionBtn {
+    float: right;
+}
+
+
+.diet-plans-container h1 {
+    margin-bottom: 25px;
+    font-size: 41px;
+    font-weight: bold;
+}
+
+.nutrition-form_holder {
+    width: 90%;
+    box-shadow: 0px 1px 9px rgb(25, 25, 25);
+}
+
+.upper-form span,
+.assigned-metrics label,
+.send-program span {
+    font-size: 31px;
+}
+
+.upper-form button {
+    padding: 9px 19px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: #00ff8c;
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: .19s ease-in-out;
+}
+
+.upper-form button:hover {
+    background-color: #000;
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.macros-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.macros-container div input {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-bottom: 1px solid #00ff8c;
+    width: 205px;
+    height: 21px;
+}
+
+.macros-container div p {
+    margin-bottom: 5px;
+    font-size: 19px;
+    color: #00ff8c;
+}
+
+.upper-form,
+.bottom-form {
+    margin-bottom: 55px;
+}
+
+.bottom-form-line {
+    width: 100%;
+    height: 1.5px;
+    margin-bottom: 55px;
+    background-color: #000;
+}
+
+.assigned-metrics {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.assigned-metrics label {
+    margin-bottom: 11px;
+}
+
+#assignedMetrics {
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+}
+
+/* Training Program */
+
+.navigation-workout {
+    width: 91%;
+    padding: 25px 35px;
+    background-color: rgb(195, 221, 255);
+    box-shadow: 0px 1px 9px rgb(93, 93, 93);
+}
+
+.training-program_form hr:first-child,
+.program-description,
+.send-program {
+    margin-bottom: 25px;
+}
+
+.send-program span {
+    font-weight: 700;
+}
+
+#sendProgram {
+    float: right;
+    padding: 5px 19px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: .15s ease-in-out;
+}
+
+#sendProgram:hover {
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+}
+
+.program-objective {
+    margin-right: 55px;
+}
+
+.objective_and_duration {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.program-description_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.program-description,
+.program-assignment {
+    display: flex;
+    flex-direction: column;
+}
+
+.program-description a,
+.objective_and_duration p,
+.program-assignment label {
+    margin-bottom: 9px;
+    font-size: 21px;
+    color: #3366cc;
+}
+
+/* Popups */
+
+#addClientPopup, #viewClientsGoals {
+    display: none;
+    position: absolute;
+    padding: 15px 15px 15px 35px;
+    width: 405px;
+    height: 250px;
+    top: 35%;
+    bottom: 35%;
+    right: 45%;
+    left: 45%;
+    z-index: 5;
+    background-color: rgb(0, 0, 0, .9);
+    border-radius: 3px;
+    overflow: scroll;
+}
+
+#addClientPopup span,
+#closeAddClientPopup, #viewClientsGoals span, #closeClientsGoalsWindow {
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#closeAddClientPopup, #closeClientsGoalsWindow {
+    width: 100%;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+#closeClientsGoalsWindow {
+    margin-left: 185px;
+}
+
+#addClientPopup hr, #viewClientsGoals hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#addClientPopup p, #viewClientsGoals p {
+    margin-bottom: 19px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+#viewClientsGoals p {
+    cursor: auto;
+}
+
+#addClientPopup p:last-child, #viewClientsGoals p:last-child {
+    margin-bottom: 0;
+}
+
+/* Chat System */
+
+#chatSystem {
+    position: fixed;
+    width: 39%;
+    height: 80%;
+    top: 7%;
+    right: -100%;
+    font-size: 19px;
+    transition: .5s ease-in-out;
+}
+
+#closeChatSystem {
+    float: right;
+    cursor: pointer;
+}
+
+.chat-header {
+    padding: 10px 15px;
+    background-color: #00041c;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chat-main-section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(225, 225, 225);
+}
+
+.rooms-container {
+    width: 35%;
+    text-align: center;
+    border-right: 1px solid #808080;
+    overflow-y: scroll;
+}
+
+.rooms-container h5 {
+    margin-bottom: 9px;
+    padding: 5px 0;
+    background-color: #36394f;
+    color: #fff;
+}
+
+#openMainChat,
+.room-name {
+    width: 75%;
+    margin: 0 auto;
+    padding: 5px 0;
+    font-size: 18px;
+    background-color: #00041c;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#openMainChat:hover,
+.room-name:hover {
+    background-color: #00093a;
+}
+
+#addChatRoom {
+    width: 95%;
+    margin: 0 auto 15px auto;
+    padding: 3px 0 5px 0;
+    color: rgb(95, 183, 109);
+    border: 2px solid rgb(95, 183, 109);
+    border-radius: 5px;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+}
+
+#addChatRoom:hover {
+    background-color: rgb(95, 183, 109);
+    color: #fff;
+}
+
+.right-chat-content {
+    width: 65%;
+}
+
+.room-creation {
+    display: none;
+    margin-top: 55px;
+    font-size: 19px;
+    text-align: center;
+}
+
+.room-creation-title {
+    margin-bottom: 9px;
+}
+
+.create-room-reminder {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#chatMembersContainer {
+    width: 55%;
+    height: 195px;
+    border: 1px solid #000;
+    overflow-y: scroll;
+    margin: 0 auto 15px auto;
+}
+
+.room-name_holder {
+    margin-bottom: 15px;
+}
+
+#roomName {
+    padding: 5px 0 5px 5px;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+#createChatRoom,
+#cancelChatCreation {
+    width: 75%;
+    margin: 0 auto 5px auto;
+    padding: 5px 0;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+}
+
+#createChatRoom {
+    background-color: rgb(95, 183, 109);
+}
+
+#cancelChatCreation {
+    background-color: #dc3545;
+}
+
+#createChatRoom:hover {
+    background-color: rgb(63, 184, 83);
+}
+
+#cancelChatCreation:hover {
+    background-color: #da2b3d;
+}
+
+/* Chat Message Holder */
+
+#chatMessageHolder {
+    display: none;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}
+
+#chatMessageHolder::-webkit-scrollbar {
+    width: 12px;
+}
+
+#chatMessageHolder::-webkit-scrollbar-track {
+    background: rgb(181, 181, 181);
+    /* color of the tracking area */
+}
+
+#chatMessageHolder::-webkit-scrollbar-thumb {
+    background-color: rgb(103, 103, 103);
+    border-radius: 20px;
+}
+
+#textField, #roomsTextField {
+    display: none;
+    border: 3px solid rgba(0, 192, 195, .15);
+}
+
+#messageInput, #inputMessege {
+    width: 100%;
+    padding: 9px 5px;
+    border: none;
+}
+
+#sendMessage, #sendMyMessage {
+    padding: 0 15px;
+    font-weight: bold;
+    background-color: rgb(54, 57, 79);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#sendMessage:hover, #sendMyMessage:hover {
+    background-color: rgb(94, 100, 138);
+}
+
+/* Bookings */
+
+.bookings {
+    padding-right: 25px;
+}
+
+.bookings-container {
+    min-height: 435px;
+    overflow-y: scroll;
+}
+
+.bookings-container h3 {
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.bookings-container hr {
+    margin-bottom: 15px;
+}
+
+#noBookings {
+    font-size: 19px;
+    text-align: center;
+}
+
+/* Chat Rooms */
+
+.chat-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 101;
+}
+
+#deleteChatRoomPopUp {
+    display: none;
+    position: fixed;
+    top: 41%;
+    right: 41%;
+    padding: 15px 35px 95px 35px;
+    background-color: rgba(0,0,0,.9);
+    color: #fff;
+}
+
+#deleteChatRoomPopUp h3 {
+    margin-bottom: 55px;
+    font-size: 29px;
+}
+
+#deleteChatRoomPopUp span {
+    font-size: 25px;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+
+#deleteChatRoomPopUp span:nth-of-type(1) {
+    float: left;
+    background-color: #dc3545;
+}
+
+#deleteChatRoomPopUp span:last-child {
+    float: right;
+    background-color: #00ff8c;
+}
