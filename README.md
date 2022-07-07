@@ -1,2 +1,2 @@
 # my-Repo
-my second repo
+There is a file, containing instructions on how to run the university final year project, in the folder.

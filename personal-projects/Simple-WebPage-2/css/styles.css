@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header-container {
+    width: 100%;
+    height: 85px;
+    background-color: #fff;
+}
+
+.first-logo {
+    float: left;
+    margin: 25px 0 0 20px;
+}
+
+.logo1 {
+    width: 100px;
+    height: 35px;
+}
+
+.second-logo {
+    float: left;
+    margin: 20px 0 0 115px;
+}
+
+.logo2 {
+    width: 45px;
+    height: 45px;
+}
+
+.text-holder {
+    float: left;
+    margin: 35px 0 0 5px;
+}
+
+.navigation-container {
+    float: right;
+    margin: 35px 5px 0 0;
+}
+
+.navigation-container a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 11px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navigation-container a:hover {
+    background-color: #80808e;
+    transform: scale(1.3);
+    border-radius: 5px;
+}
+
+/* Main Layout */
+
+.background-holder {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+}
+
+.headers-holder {
+    display: block;
+    margin-left: 500px;
+    padding-top: 150px;
+}
+
+.top-header {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 20px;
+    width: 550px;
+}
+
+.middle-header {
+    color: #ff4500;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 450px;
+    margin-bottom: 30px;
+}
+
+.bottom-paragraph {
+    color: #fff;
+    width: 350px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.etiquet-holder {
+    float: left;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.etiquet1 {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.etiquet2 {
+    float: left;
+    width: 100px;
+    height: 50px;
+}
+
+.chat-with-us {
+    float: right;
+    width: 255px;
+    height: 33px;
+    margin-top: 35px;
+    background-color: #d2691e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chat-paragraph, .symbol-up {
+    display: inline-block;
+    margin-top: 9px;
+    color: #fff;
+}
+
+.chat-paragraph {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.symbol-up {
+    float: right;
+    margin-right: 8px;
+}
+
+.rating-section {
+    background-color: #d0d0e4;
+    width: 100%;
+    height: 83px;
+    margin-bottom: 135px;
+}
+
+.rating-content-holder {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+
+.rating-holder {
+    float: left;
+}
+
+.stars-holder {
+    position: relative;
+    width: 79px;
+    height: 18px;
+    background-color: #ff4500;
+    border-radius: 3px;
+    margin: 0 auto 3px auto;
+}
+
+.stars {
+    position: absolute;
+    bottom: -1px;
+    margin-left: 2px;
+    font-size: 18px;
+    color: #ffff00;
+}
+
+.already-rated {
+    font-size: 13px;
+    font-weight: bold;
+    color: #5f5e5e;
+}
+
+.overall-client-holder {
+    float: left;
+    margin-left: 20px;
+}
+
+.overall-text {
+    color: rgb(44, 43, 43);
+}
+
+.overall-client-holder a {
+    text-decoration: none;
+}
+
+.clickable-text {
+    color: #ff4500;
+}
+
+.clickable-text:hover {
+    color: rgb(64, 64, 247);
+}
+
+/* Third section */
+
+.text-logos-holder {
+    float: left;
+    margin-left: 123px;
+}
+
+.web-header {
+    font-weight: 900;
+    font-size: 29px;
+    margin-bottom: 35px;
+}
+
+.sub-paragraph {
+    width: 511px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.mini-logos { 
+    width: 60px;
+    height: 60px;
+    padding-right: 5px;
+}
+
+.mini-logos.second {
+    width: 63px;
+    height: 63px;
+}
+
+.column-content {
+    float: left;
+    margin-left: 123px;
+}
+
+.column-content a {
+    text-decoration: none;
+    color: #686868;
+}
+
+.column-content, .column {
+    border: 0.5px solid #808080;
+}
+
+.column1, .column2, .column3, .column4, .column5, .column6 {
+    border-bottom: 0;
+    border-right: 0;
+    padding: 20px 60px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+}
