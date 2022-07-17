@@ -1,0 +1,89 @@
+body { 
+  background: linear-gradient(#04b0f7, #04fa77); 
+  height: 1000px
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.calculator {
+  width: 350px;
+  height: 500px;
+  margin: 55px auto 0 auto;
+  background-color: red;
+}
+
+.calculator-header {
+  width: 100%;
+  height: 15%;
+  padding: 5% 0;
+  background-color: #023332;
+}
+
+.calculator-buttons {
+  height: 80%;
+  background-color: #fff;
+}
+
+.buttons-row {
+  height: 20%;
+}
+
+.buttons-row > * {
+  background-color: #bfedf8;
+  border-color: #fff;
+}
+
+.buttons-row > *:hover {
+  background-color: #d6f7ff;
+}
+
+.clear-btn, .equal-btn {
+  width: 50%;
+}
+
+.delete-btn, .dot-btn {
+  width: 25%;
+}
+
+.clear-btn, .equal-btn, .delete-btn, .dot-btn {
+  height: 100%;
+  text-align: center;
+  font-size: 21px;
+}
